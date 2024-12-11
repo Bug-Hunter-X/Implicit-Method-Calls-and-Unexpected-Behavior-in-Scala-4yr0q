@@ -1,0 +1,14 @@
+```scala
+class MyClass(val x: Int) {
+  def myMethod(y: Int): Int = {
+    x + y
+  }
+  override def toString: String = s"MyClass(x=$x)"
+}
+
+object MainObject extends App {
+  val obj = new MyClass(5)
+  println(obj.myMethod(10))
+  println(obj.toString) // Explicitly defined toString method. More robust and less error-prone
+}
+```
